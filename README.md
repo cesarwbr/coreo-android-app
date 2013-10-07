@@ -1,4 +1,4 @@
-# Android app for Coreo App executor using PhoneGap
+# Android Coreo app using PhoneGap
 
 ![](https://dl.dropboxusercontent.com/u/36452000/images/apps/phonegap-app.png)
 
