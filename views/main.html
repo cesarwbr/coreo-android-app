@@ -1,0 +1,28 @@
+<div class="well">
+  <h2>Send SMS by Coreo</h2>
+  
+  <form name="form" ng-submit="enviaSMS()" class="form-horizontal">
+    <div class="control-group">
+      <label class="control-label" for="sendSmsTo">Telefone:</label>
+      <div class="controls">
+        <!-- <input id="sendSmsTo" type="text" class="form-control" ng-model="sendSmsTo" size="30" placeholder="Telefone de destino" required> -->
+        <select id="sendSmsTo" ng-model="sendSmsTo" ng-options="contact.displayName for contact in contacts">
+        </select>
+      </div>
+    </div>
+  	<div class="control-group">
+      <label class="control-label" for="sendSmsText">Mensagem:</label>
+      <div class="controls">
+        <textarea id="sendSmsText" class="form-control"  ng-model="sendSmsText" placeholder="Mensagem" required></textarea>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <input type="submit" class="btn btn-primary" value="Enviar" ng-disabled="form.$invalid">
+      </div>
+    </div>
+      
+  	
+  </form>
+  <span class="label label-success">{{result}}</span> {{resultMessage}}
+</div>
